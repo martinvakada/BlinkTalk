@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: blinktalk-backend
+    env: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: DB_USER
+        sync: false
+      - key: DB_PW
+        sync: false
+      - key: CLIENT_URL
+        sync: false
